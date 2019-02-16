@@ -1,0 +1,93 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Calibri;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25400\viewh13560\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0  
+\b\fs40 Lab Session 2 : EECS 245\
+README - HOW TO RUN THE CODE\
+Name: Satvik Kulshreshtha\
+\pard\pardeftab720\partightenfactor0
+
+\b0\fs22 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b\fs28 \cf0 1. Parallel prefix sum with OpenMP \
+In the OpenMP lectures, we reviewed a parallel prefix sum algorithm. Implement that algorithm with OpenMP and C/C++. \
+2.1 Use different thread scheduling strategies (static and dynamic). Report the execution time of each strategy. \
+\
+For static scheduling:-\
+1.In terminal : Goto the file\
+2.compile the file : gcc -fopenmp presum_static.c -o presum_static\
+3.run the file: ./presum_static\
+it will produce the output\
+\
+For dynamic scheduling:-\
+\pard\pardeftab720\partightenfactor0
+\cf0 1.In terminal : Goto the file\
+2.compile the file : gcc -fopenmp presum_dynamic.c -o presum_dynamic\
+3.run the file: ./presum_dynamic\
+it will produce the output\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+2.2 Fix your scheduling strategy and then change the number of OpenMP threads. Report the execution times.
+\f0\b0  \
+\
+
+\f1\b 1.In the terminal, export number of threads (I have taken number of threads = 4):  export OMP_NUM_THREADS=4\
+2. compile the program again (i have fixed it with dynamic scheduling) : gcc -fopenmp presum_dynamic.c -o presum_dynamic\
+\pard\pardeftab720\partightenfactor0
+\cf0 3.run the file: ./presum_dynamic\
+it will produce the output
+\f0\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf0 x\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85..x\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85..x\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85\'85.\
+
+\f0\b0 \
+
+\f1\b  2. Parallel a serial program with OpenMP \
+Quake (see quake.c at CatCourses) is a serial program modeling an earthquake. In this task, you will add OpenMP directives to create a parallel program. You should submit your program and the execution times to run your program on two input files, quake.in.short and quake.in. Quake reads one input file from standard input, and produces its output on standard output. \
+In your report, explain what directives are used; explain what your performance results are, and whether the performance results are expected. \
+\
+For input file quake.in:- in serial programming\
+1. open terminal and compile the quake file: gcc quake.c -o quake.o -lm\
+2. run the file: time ./quake.o < quake.in\
+it will give the execution time.\
+\
+For input file quake.in.short:- in serial programming\
+\pard\pardeftab720\partightenfactor0
+\cf0 1. open terminal and compile the quake file: gcc quake.c -o quake.o -lm\
+2. run the file: time ./quake.o < quake.in.short\
+it will give the execution time.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 For input file quake.in:- in parallel programming\
+1. open terminal and compile the quake file: gcc quake1.c -o quake1.o -lm\
+2. run the file: time ./quake1.o < quake1.in\
+it will give the execution time.\
+\
+For input file quake.in.short :- in parallel programming\
+1. open terminal and compile the quake file: gcc quake1.c -o quake1.o -lm\
+2. run the file: time ./quake1.o < quake1.in.short\
+it will give the execution time.\
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\
+
+\fs36 *Upadated file is named as quake1.c*
+\fs28 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 \
+}
